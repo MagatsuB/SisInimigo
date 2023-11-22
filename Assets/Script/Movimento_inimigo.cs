@@ -9,16 +9,27 @@ public class Movimento_inimigo : MonoBehaviour
 
     public Transform _player;
 
+    public bool _checkMove;
+
 
     // Start is called before the first frame update
     void Start()
     {
+
         _agent = GetComponent<NavMeshAgent>();
+        _checkMove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-       _agent.SetDestination(_player.position);
+        if (_checkMove)
+        {
+         _agent.SetDestination(_player.position);
+        }
+        else
+        {
+            _agent.velocity = new Vector3(0, 0, 0);
+        }
     }
 }
