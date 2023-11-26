@@ -51,7 +51,7 @@ public class InimigoControl : MonoBehaviour
             bullet.transform.SetParent(_grupoInimigos.transform);
             bullet.GetComponent<Movimento_inimigo>()._player = _alvoInicial;
             bullet.SetActive(true);
-            bullet.GetComponent<HitInimigo>().Restart();
+           bullet.GetComponent<HitInimigo>().Restart();
         }
     }
 }

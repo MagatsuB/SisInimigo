@@ -39,10 +39,10 @@ public class HitInimigo : MonoBehaviour
 
     IEnumerator RestartTime()
     {
-        _particRestart.SetActive(true);
-       /* yield return new WaitForSeconds(1);
+        _particRestart.SetActive(false);
+        yield return new WaitForSeconds(1);
         _meshren.enabled = true;
-        _collider.enabled = true;*/
+        _collider.enabled = true;
         yield return new WaitForSeconds(0.5f);
         _moveInim._checkMove = true;
     }
